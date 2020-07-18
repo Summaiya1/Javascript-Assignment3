@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <div style="margin-left: 200px;">
+        <div > 
+          <img src="pictures/pic1.jpg" onclick="showlargepic(this.src)" style="width: 200px; height: 200px;">
+          <img src="pictures/pic2.jpg" onclick="showlargepic(this.src)" style="width: 200px; height: 200px;">
+          <img src="pictures/pic3.jpg" onclick="showlargepic(this.src)" style="width: 200px; height: 200px;">
+          <img src="pictures/pic4.jpg" onclick="showlargepic(this.src)" style="width: 200px; height: 200px;">
+          
+          </div>
+          <div style="display: none;" id="gd" >
+        <img id="gg" style="width: 560px; height: 450px;">
+        </div>
+    </div>
+    
+    <script>
+     function showlargepic(source)
+        {
+            document.getElementById("gd").style.display="block";
+            document.getElementById("gg").src=source;
+        }
+    </script>
+</body>
+</html>

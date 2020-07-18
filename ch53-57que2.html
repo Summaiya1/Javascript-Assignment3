@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <div>
+        <p id=big>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Quibusdam sequi dolorum laudantium aliquam ducimus enim odit
+           tempora earum voluptatesaccusantium laboriosam distinctio autem
+         velit dolore in vel sit perferendis?
+        </p>
+        <button onclick="bigsize()">Increase Font-size</button>
+        <button onclick="smallsize()">Decrease Font-size</button>
+        
+    </div>
+  
+    <script>
+        function bigsize()
+        {
+            txt = document.getElementById('big');
+            style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+            currentSize = parseFloat(style);
+            txt.style.fontSize = (currentSize + 10) + 'px';
+
+        }
+        function smallsize()
+        {
+        txt = document.getElementById('big');
+            style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+            currentSize = parseFloat(style);
+            txt.style.fontSize = (currentSize - 10) + 'px';
+
+        }
+    </script>
+</body>
+</html>
